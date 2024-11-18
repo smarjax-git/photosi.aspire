@@ -1,0 +1,6 @@
+@PhotoSi.Utenti_HostAddress = http://localhost:5263
+
+GET {{PhotoSi.Utenti_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

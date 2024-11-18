@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>039f6206-599b-4c1f-88c3-120fac82983c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="8.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PhotoSi.API\PhotoSi.API.csproj" />
+    <ProjectReference Include="..\PhotoSi.Ordini\PhotoSi.Ordini.csproj" />
+    <ProjectReference Include="..\PhotoSi.PickupPoint\PhotoSi.PickupPoint.csproj" />
+    <ProjectReference Include="..\PhotoSi.Prodotti\PhotoSi.Prodotti.csproj" />
+    <ProjectReference Include="..\PhotoSi.Utenti\PhotoSi.Utenti.csproj" />
+  </ItemGroup>
+
+</Project>

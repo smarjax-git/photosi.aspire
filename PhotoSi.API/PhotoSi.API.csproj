@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>a61de55d-d4bc-4c95-af31-a93a4ae423ca</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <OpenApiReference Include="OpenAPIs\swagger6.json" CodeGenerator="NSwagCSharp" Namespace="PhotoSi.API.WS.Ordini" ClassName="OrdiniWS">
+      <SourceUri>http://localhost:5235/swagger/v1/swagger.json</SourceUri>
+    </OpenApiReference>
+    <OpenApiReference Include="OpenAPIs\swagger8.json" CodeGenerator="NSwagCSharp" Namespace="PhotoSi.API.Users" ClassName="UsersWS">
+      <SourceUri>http://localhost:5263/swagger/v1/swagger.json</SourceUri>
+    </OpenApiReference>
+    <OpenApiReference Include="OpenAPIs\swagger9.json" CodeGenerator="NSwagCSharp" Namespace="PhotoSi.API.WS.Prodotti" ClassName="ProdottiWS">
+      <SourceUri>http://localhost:5128/swagger/v1/swagger.json</SourceUri>
+    </OpenApiReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NSwag.ApiDescription.Client" Version="13.18.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PhotoSi.ServiceDefaults\PhotoSi.ServiceDefaults.csproj" />
+  </ItemGroup>
+
+</Project>
